@@ -1,6 +1,7 @@
 package magmact_domain;
 
 import java.io.Serializable;
+import java.util.Map;
 
 @SuppressWarnings("ALL")
 public class Clause implements Serializable {
@@ -59,6 +60,10 @@ public class Clause implements Serializable {
 
 	public boolean hasPrevious () {
 		return comparison != null? comparison.hasPrevious() : false;
+	}
+
+	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
+		return comparison != null? comparison.getPreviousRequest() : null;
 	}
 
 	public boolean hasComposedParameters() {

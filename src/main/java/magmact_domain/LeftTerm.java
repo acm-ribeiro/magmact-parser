@@ -1,6 +1,7 @@
 package magmact_domain;
 
 import java.io.Serializable;
+import java.util.Map;
 
 @SuppressWarnings("ALL")
 public class LeftTerm implements Serializable {
@@ -102,6 +103,9 @@ public class LeftTerm implements Serializable {
         return call != null? call.isPrevious() : false;
     }
 
+    public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
+        return call != null? call.getPreviousRequest() : null;
+    }
 
     public boolean hasComposedParameters() {
         return call != null? call.hasComposedParameters() : false;

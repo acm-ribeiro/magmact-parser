@@ -1,6 +1,7 @@
 package magmact_domain;
 
 import java.io.Serializable;
+import java.util.Map;
 
 @SuppressWarnings("ALL")
 public class Call implements Serializable {
@@ -20,11 +21,9 @@ public class Call implements Serializable {
 		return operation;
 	}
 
-
 	public void setOperation(Operation operation) {
 		this.operation = operation;
 	}
-
 
 	public void setOperationPrevious(Operation operation) {
 		operationPrevious.setOperation(operation);
@@ -48,7 +47,6 @@ public class Call implements Serializable {
 		return operationPrevious;
 	}
 
-
 	public String getQueryParameterName() {
 		if(operation != null && operation.isQueryParam())
 			return operation.getQueryParameterName();
@@ -62,7 +60,6 @@ public class Call implements Serializable {
 		return operation != null? operation.getUrl() : operationPrevious.getUrl();
 	}
 
-
 	public String getCollectionUrlParameterName() {
 		return operation != null? operation.getUrlParameterName() : operationPrevious.getUrlParameterName();
 	}
@@ -75,11 +72,9 @@ public class Call implements Serializable {
 		return operationPrevious != null;
 	}
 
-
 	public boolean hasBlockParameter () {
 		return operation != null? operation.hasBlockParameter() : operationPrevious.hasBlockParameter();
 	}
-
 
 	public boolean hasPathParameter() {
 		boolean operation_path = operation != null? operation.isPathParam() || operation.hasUrlPathParam() : false;
@@ -88,7 +83,6 @@ public class Call implements Serializable {
 		return operation_path || previous_path;
 	}
 
-
 	public boolean hasQueryParameter() {
 		boolean operation_query = operation != null? operation.isQueryParam() || operation.hasUrlQueryParam() : false;
 		boolean previous_query = operationPrevious != null? operationPrevious.hasQueryParam() : false;
@@ -96,11 +90,9 @@ public class Call implements Serializable {
 		return operation_query || previous_query;
 	}
 
-
 	public boolean hasThis() {
 		return operation != null? operation.hasThis() : operationPrevious.hasThis();
 	}
-
 
 	public boolean hasComposedParameters() {
 		boolean operation_comp = operation != null? operation.hasComposedParameters() : false;
@@ -109,7 +101,6 @@ public class Call implements Serializable {
 		return operation_comp || previous_comp;
 	}
 
-
 	public boolean hasUrlComposedParameters() {
 		boolean operation_comp = operation != null? operation.hasUrlComposedParameters() : false;
 		boolean previous_comp = operationPrevious != null? operationPrevious.hasUrlComposedParameters() : false;
@@ -117,6 +108,9 @@ public class Call implements Serializable {
 		return operation_comp || previous_comp;
 	}
 
+	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
+		return isPrevious()? operationPrevious.getHTTPRequest() : null;
+	}
 
 	public String toString() {
 		return operation != null? operation.toString() : operationPrevious.toString();

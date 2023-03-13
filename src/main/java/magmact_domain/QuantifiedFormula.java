@@ -2,6 +2,7 @@ package magmact_domain;
 
 
 import java.io.Serializable;
+import java.util.Map;
 
 @SuppressWarnings("ALL")
 public class QuantifiedFormula implements Serializable {
@@ -137,6 +138,15 @@ public class QuantifiedFormula implements Serializable {
 			return variables.hasPrevious() || expression.hasPrevious();
 		else
 			return variables.hasPrevious() || quantifiedFormula.hasPrevious();
+	}
+
+	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
+		if (expression != null && expression.hasPrevious())
+			return expression.getPreviousRequest();
+		else if (quantifiedFormula != null && quantifiedFormula.hasPrevious())
+			return quantifiedFormula.getPreviousRequest();
+		else
+			return null;
 	}
 
 	/**

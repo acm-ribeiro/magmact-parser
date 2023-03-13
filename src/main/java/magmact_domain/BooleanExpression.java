@@ -1,6 +1,7 @@
 package magmact_domain;
 
 import java.io.Serializable;
+import java.util.Map;
 
 @SuppressWarnings("ALL")
 public class BooleanExpression implements Serializable {
@@ -93,6 +94,10 @@ public class BooleanExpression implements Serializable {
 
 	public boolean hasPrevious() {
 		return clause != null? clause.hasPrevious() : (left.hasPrevious() || right.hasPrevious());
+	}
+
+	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
+		return clause != null? clause.getPreviousRequest() : (left.hasPrevious()? left.getPreviousRequest() : right.getPreviousRequest());
 	}
 
 

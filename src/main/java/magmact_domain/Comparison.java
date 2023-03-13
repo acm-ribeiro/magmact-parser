@@ -2,6 +2,7 @@ package magmact_domain;
 
 
 import java.io.Serializable;
+import java.util.Map;
 
 @SuppressWarnings("ALL")
 public class Comparison implements Serializable {
@@ -91,6 +92,18 @@ public class Comparison implements Serializable {
 		return left.hasPrevious() || right.hasPrevious();
 	}
 
+	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
+		if (hasPrevious())
+			if (right.hasPrevious())
+				return right.getPreviousRequest();
+			else
+				return left.getPreviousRequest();
+
+		// something went terribly wrong
+		return null;
+
+		//return hasPrevious()? (left.hasPrevious()? left.getPreviousRequest() : null) : (right.hasPrevious()? right.getPreviousRequest() : null);
+	}
 
 	public boolean hasComposedParameters() {
 		return left.hasComposedParameters() || right.hasComposedParameters();

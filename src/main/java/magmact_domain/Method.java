@@ -16,4 +16,9 @@ public class Method implements Serializable {
 	public String getID() {
 		return id;
 	}
+
+	@Override
+	public String toString() {
+		return id;
+	}
 }

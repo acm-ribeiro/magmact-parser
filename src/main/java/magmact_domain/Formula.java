@@ -1,6 +1,7 @@
 package magmact_domain;
 
 import java.io.Serializable;
+import java.util.Map;
 
 @SuppressWarnings("ALL")
 public class Formula implements Serializable {
@@ -95,6 +96,15 @@ public class Formula implements Serializable {
 
 	public boolean hasPrevious() {
 		return isQuantified()? quantifiedFormula.hasPrevious() : booleanExpression.hasPrevious();
+	}
+
+	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
+		if (quantifiedFormula != null && quantifiedFormula.hasPrevious())
+			return quantifiedFormula.getPreviousRequest();
+		else if (booleanExpression != null && booleanExpression.hasPrevious())
+			return booleanExpression.getPreviousRequest();
+		else
+			return null;
 	}
 
 

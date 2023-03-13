@@ -2,6 +2,8 @@ package magmact_domain;
 
 
 import java.io.Serializable;
+import java.util.Map;
+import java.util.Map.Entry;
 
 @SuppressWarnings("ALL")
 public class Operation implements Serializable {
@@ -27,11 +29,9 @@ public class Operation implements Serializable {
 		return header;
 	}
 
-
 	public void setOperationParameter(OperationParameter parameter) {
 		this.parameter = parameter;
 	}
-
 
 	public void setUrlParameterValue(String name, String value) {
 		if (parameter != null && !parameter.isThis())
@@ -43,16 +43,13 @@ public class Operation implements Serializable {
 			parameter.setUrl(url);
 	}
 
-
 	public OperationParameter getParameter() {
 		return parameter;
 	}
 
-
 	public OperationSuffix getSuffix() {
 		return suffix;
 	}
-
 
 	public String getQueryParameterName() {
 		return queryParam.getParameterName();
@@ -71,11 +68,9 @@ public class Operation implements Serializable {
 		return isQueryParam()? queryParam.getParameterName() : parameter.getUrlQueryParameterName();
 	}
 
-
 	public String getUrl() {
 		return parameter != null? parameter.getUrl() : null;
 	}
-
 
 	public String getUrlParameterName() {
 		return parameter != null? parameter.getCollectionUrlParameterName() : null;
@@ -89,6 +84,17 @@ public class Operation implements Serializable {
 		return pathParam;
 	}
 
+	/**
+	 * Returns the HTTP request for this operation method. If the operation parameter is a path param
+	 * or a query param, then the request is THIS and this method returns an "empty" request with
+	 * method = "" and url = "".
+	 * @return null if the operation is a query or path parameter
+	 */
+	public Entry<OperationHeader, HTTPRequest> getHTTPRequest() {
+		HTTPRequest req = parameter != null && !parameter.isThis()? parameter.getRequest() : null;
+		return req != null? Map.entry(header, req) : Map.entry(header, new HTTPRequest("", ""));
+	}
+
 	public boolean isPathParam() {
 		return pathParam != null;
 	}
@@ -100,7 +106,6 @@ public class Operation implements Serializable {
 	public boolean hasUrlResponseBodyComposed() {
 		return parameter != null && parameter.hasUrlResponseBody();
 	}
-
 
 	public boolean hasUrlComposedParameters() {
 		return hasUrlRequestBodyComposed() || hasUrlResponseBodyComposed();
@@ -143,16 +148,13 @@ public class Operation implements Serializable {
 		return header != null && header.isResponseBody();
 	}
 
-
 	public boolean isResponseCode() {
 		return header != null && header.isResponseCode();
 	}
 
-
 	public boolean hasComposedParameters() {
 		return suffix != null && suffix.isStringParam();
 	}
-
 
 	public QueryParam getQueryParam() {
 		return queryParam;

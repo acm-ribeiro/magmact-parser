@@ -1,6 +1,7 @@
 package magmact_domain;
 
 import java.io.Serializable;
+import java.util.Map;
 
 @SuppressWarnings("ALL")
 public class OperationPrevious implements Serializable {
@@ -20,26 +21,21 @@ public class OperationPrevious implements Serializable {
 		return header;
 	}
 
-
 	public Operation getOperation() {
 		return operation;
 	}
-
 
 	public void setOperation(Operation operation) {
 		this.operation = operation;
 	}
 
-
 	public String getQueryParameterName() {
 		return operation.isQueryParam()? operation.getQueryParameterName() : operation.getUrlQueryParameterName();
 	}
 
-
 	public String getUrl() {
 		return operation.getUrl();
 	}
-
 
 	public String getUrlParameterName() {
 		return operation.getUrlParameterName();
@@ -57,16 +53,13 @@ public class OperationPrevious implements Serializable {
 		return operation.isQueryParam() || operation.hasUrlQueryParam();
 	}
 
-
 	public boolean hasThis() {
 		return operation.hasThis();
 	}
 
-
 	public boolean hasComposedParameters() {
 		return operation.hasComposedParameters();
 	}
-
 
 	public boolean hasUrlComposedParameters() {
 		return operation.hasUrlComposedParameters();
@@ -76,7 +69,6 @@ public class OperationPrevious implements Serializable {
 		return operation.hasBlockParameter();
 	}
 
-
 	public void setUrlParameterValue(String name, String value) {
 		operation.setUrlParameterValue(name, value);
 	}
@@ -85,6 +77,9 @@ public class OperationPrevious implements Serializable {
 		operation.setUrl(url);
 	}
 
+	public Map.Entry<OperationHeader, HTTPRequest> getHTTPRequest() {
+		return operation.getHTTPRequest();
+	}
 
 
 	@Override
