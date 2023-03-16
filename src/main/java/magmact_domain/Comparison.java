@@ -92,17 +92,15 @@ public class Comparison implements Serializable {
 		return left.hasPrevious() || right.hasPrevious();
 	}
 
-	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
+	public OperationPrevious getOperationPrevious () {
 		if (hasPrevious())
 			if (right.hasPrevious())
-				return right.getPreviousRequest();
+				return right.getOperationPrevious();
 			else
-				return left.getPreviousRequest();
+				return left.getOperationPrevious();
 
 		// something went terribly wrong
 		return null;
-
-		//return hasPrevious()? (left.hasPrevious()? left.getPreviousRequest() : null) : (right.hasPrevious()? right.getPreviousRequest() : null);
 	}
 
 	public boolean hasComposedParameters() {

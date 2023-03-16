@@ -31,7 +31,6 @@ public class BooleanExpression implements Serializable {
 		return right;
 	}
 
-
 	public void setClause(Clause clause) {
 		this.clause = clause;
 	}
@@ -53,7 +52,6 @@ public class BooleanExpression implements Serializable {
 		return op;
 	}
 
-
 	public String getQueryParameterName() {
 		if (clause != null)
 			return clause.getQueryParameterName();
@@ -69,7 +67,6 @@ public class BooleanExpression implements Serializable {
 		return getQueryParameterName() != null;
 	}
 
-
 	public boolean isImplication() {
 		return op.equals("=>");
 	}
@@ -78,11 +75,9 @@ public class BooleanExpression implements Serializable {
 		return clause != null;
 	}
 
-
 	public boolean hasPathParameter() {
 		return clause != null? clause.hasPathParameter() : (left.hasPathParameter() || right.hasPathParameter());
 	}
-
 
 	public boolean hasQueryParameter() {
 		return clause != null? clause.hasQueryParameter() : (left.hasQueryParameter() || right.hasQueryParameter());
@@ -96,8 +91,8 @@ public class BooleanExpression implements Serializable {
 		return clause != null? clause.hasPrevious() : (left.hasPrevious() || right.hasPrevious());
 	}
 
-	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
-		return clause != null? clause.getPreviousRequest() : (left.hasPrevious()? left.getPreviousRequest() : right.getPreviousRequest());
+	public OperationPrevious getOperationPrevious() {
+		return clause != null? clause.getOperationPrevious() : (left.hasPrevious()? left.getOperationPrevious() : right.getOperationPrevious());
 	}
 
 

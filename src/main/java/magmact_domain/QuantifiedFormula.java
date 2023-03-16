@@ -140,11 +140,11 @@ public class QuantifiedFormula implements Serializable {
 			return variables.hasPrevious() || quantifiedFormula.hasPrevious();
 	}
 
-	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
+	public OperationPrevious getOperationPrevious() {
 		if (expression != null && expression.hasPrevious())
-			return expression.getPreviousRequest();
+			return expression.getOperationPrevious();
 		else if (quantifiedFormula != null && quantifiedFormula.hasPrevious())
-			return quantifiedFormula.getPreviousRequest();
+			return quantifiedFormula.getOperationPrevious();
 		else
 			return null;
 	}

@@ -72,6 +72,8 @@ public class HTTPRequest implements Serializable {
 
 	@Override
 	public String toString() {
+		if(method.equals("") && url.equals(""))
+			return "";
 		return method.getID().toUpperCase() + " " + url.toString();
 	}
 	

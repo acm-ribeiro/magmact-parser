@@ -77,7 +77,7 @@ public class OperationPrevious implements Serializable {
 		operation.setUrl(url);
 	}
 
-	public Map.Entry<OperationHeader, HTTPRequest> getHTTPRequest() {
+	public HTTPRequest getHTTPRequest() {
 		return operation.getHTTPRequest();
 	}
 

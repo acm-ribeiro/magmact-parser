@@ -53,7 +53,6 @@ public class LeftTerm implements Serializable {
         return param != null? param.getStringParameterName() : null;
     }
 
-
     public int getPathParameterIndex() {
         return call.getPathParameterIndex();
     }
@@ -84,16 +83,13 @@ public class LeftTerm implements Serializable {
         hasCurls = false;
     }
 
-
     public boolean hasPathParameter() {
        return call != null? call.hasPathParameter() : false;
     }
 
-
     public boolean hasQueryParameter() {
         return call != null? call.hasQueryParameter() : false;
     }
-
 
     public boolean hasThis() {
         return call != null? call.hasThis() : false;
@@ -103,8 +99,8 @@ public class LeftTerm implements Serializable {
         return call != null? call.isPrevious() : false;
     }
 
-    public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
-        return call != null? call.getPreviousRequest() : null;
+    public OperationPrevious getOperationPrevious() {
+        return call != null? call.getOperationPrevious() : null;
     }
 
     public boolean hasComposedParameters() {

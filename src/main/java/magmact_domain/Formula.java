@@ -98,11 +98,12 @@ public class Formula implements Serializable {
 		return isQuantified()? quantifiedFormula.hasPrevious() : booleanExpression.hasPrevious();
 	}
 
-	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
+
+	public OperationPrevious getOperationPrevious() {
 		if (quantifiedFormula != null && quantifiedFormula.hasPrevious())
-			return quantifiedFormula.getPreviousRequest();
+			return quantifiedFormula.getOperationPrevious();
 		else if (booleanExpression != null && booleanExpression.hasPrevious())
-			return booleanExpression.getPreviousRequest();
+			return booleanExpression.getOperationPrevious();
 		else
 			return null;
 	}

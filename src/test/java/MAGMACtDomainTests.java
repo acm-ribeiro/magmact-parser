@@ -62,8 +62,8 @@ public class MAGMACtDomainTests {
     public void test_getPreviousRequest_response() {
         Formula f = getFormula("previous(response_body(GET /resources/{resource_id})) == 2");
 
-        String actual = f.getPreviousRequest().toString();
-        String expected = "response_body=GET /resources/{resource_id}";
+        String actual = f.getOperationPrevious().getHTTPRequest().toString();
+        String expected = "GET /resources/{resource_id}";
 
         assertEquals(expected, actual);
     }
@@ -72,47 +72,21 @@ public class MAGMACtDomainTests {
     public void test_getPreviousRequest_request() {
         Formula f = getFormula("previous(request_body(GET /resources/{resource_id})) == 2");
 
-        String actual = f.getPreviousRequest().toString();
-        String expected = "request_body=GET /resources/{resource_id}";
+        String actual = f.getOperationPrevious().getHTTPRequest().toString();
+        String expected = "GET /resources/{resource_id}";
 
         assertEquals(expected, actual);
     }
 
     @Test
-    public void test_getPreviousRequest_null1() {
-        Formula f = getFormula("previous(response_body(this)) == 2");
+    public void getPrevious() {
+        Formula f1 = getFormula("previous(response_body(GET /rs/{r_id})) == response_body(this)");
+        Formula f2 = getFormula("response_body(this) == previous(response_body(GET /rs/{r_id}))");
 
-        Map.Entry<OperationHeader, HTTPRequest> actual = f.getPreviousRequest();
-        String expected = "response_body";
+        OperationPrevious prev1 = f1.getOperationPrevious();
+        OperationPrevious prev2 = f2.getOperationPrevious();
 
-        assertEquals(expected, actual.getKey().toString());
-
-        assertEquals(actual.getValue().getUrl().toString(), "");
-        assertEquals(actual.getValue().getMethod().toString(), "");
-    }
-
-    @Test
-    public void test_getPreviousRequest_null2() {
-        Formula f = getFormula("previous(request_body(this)) == 2");
-
-        Map.Entry<OperationHeader, HTTPRequest> actual = f.getPreviousRequest();
-        String expected = "request_body";
-
-        assertEquals(expected, actual.getKey().toString());
-
-        assertEquals(actual.getValue().getUrl().toString(), "");
-        assertEquals(actual.getValue().getMethod().toString(), "");
-    }
-
-    @Test
-    public void test_getPreviousRequest_right() {
-        Formula fl = getFormula("previous(response_body(GET /rs/{r_id})) == response_body(this)");
-        Formula fr = getFormula("response_body(this) == previous(response_body(GET /rs/{r_id}))");
-
-        Map.Entry<OperationHeader, HTTPRequest> lr = fl.getPreviousRequest();
-        Map.Entry<OperationHeader, HTTPRequest> rr = fr.getPreviousRequest();
-        
-        assertEquals(lr.toString(), rr.toString());
+        assertEquals(prev1.toString(), prev2.toString());
     }
 
 

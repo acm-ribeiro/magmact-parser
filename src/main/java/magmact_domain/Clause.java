@@ -16,6 +16,7 @@ public class Clause implements Serializable {
 		this.comparison = comparison;
 	}
 
+
 	public BooleanValue getBooleanValue() {
 		return value;
 	}
@@ -23,7 +24,6 @@ public class Clause implements Serializable {
 	public Comparison getComparison() {
 		return comparison;
 	}
-
 
 	public String getQueryParameterName() {
 		return comparison.getQueryParameterName();
@@ -62,8 +62,8 @@ public class Clause implements Serializable {
 		return comparison != null? comparison.hasPrevious() : false;
 	}
 
-	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
-		return comparison != null? comparison.getPreviousRequest() : null;
+	public OperationPrevious getOperationPrevious() {
+		return comparison != null? comparison.getOperationPrevious() : null;
 	}
 
 	public boolean hasComposedParameters() {

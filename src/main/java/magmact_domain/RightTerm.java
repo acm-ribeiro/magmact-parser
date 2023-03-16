@@ -34,21 +34,17 @@ public class RightTerm implements Serializable {
             leftTerm.setParam(name, value);
     }
 
-
     public String getQueryParameterName() {
         return leftTerm != null? leftTerm.getQueryParameterName() : null;
     }
-
 
     public String getStringParameterName() {
         return leftTerm != null? leftTerm.getStringParameterName() : null;
     }
 
-
     public boolean hasStringParameter() {
         return leftTerm != null? leftTerm.hasStringParameter() : false;
     }
-
 
     public boolean hasPathParameter() {
         return leftTerm != null? leftTerm.hasPathParameter() : false;
@@ -66,8 +62,8 @@ public class RightTerm implements Serializable {
         return leftTerm != null? leftTerm.hasPrevious() : false;
     }
 
-    public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
-        return leftTerm != null? leftTerm.getPreviousRequest() : null;
+    public OperationPrevious getOperationPrevious() {
+        return leftTerm != null? leftTerm.getOperationPrevious() : null;
     }
 
     public boolean hasComposedParameters() {

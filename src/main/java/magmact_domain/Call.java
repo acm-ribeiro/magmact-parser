@@ -108,10 +108,6 @@ public class Call implements Serializable {
 		return operation_comp || previous_comp;
 	}
 
-	public Map.Entry<OperationHeader, HTTPRequest> getPreviousRequest() {
-		return isPrevious()? operationPrevious.getHTTPRequest() : null;
-	}
-
 	public String toString() {
 		return operation != null? operation.toString() : operationPrevious.toString();
 	}

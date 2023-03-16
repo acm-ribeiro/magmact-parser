@@ -84,15 +84,8 @@ public class Operation implements Serializable {
 		return pathParam;
 	}
 
-	/**
-	 * Returns the HTTP request for this operation method. If the operation parameter is a path param
-	 * or a query param, then the request is THIS and this method returns an "empty" request with
-	 * method = "" and url = "".
-	 * @return null if the operation is a query or path parameter
-	 */
-	public Entry<OperationHeader, HTTPRequest> getHTTPRequest() {
-		HTTPRequest req = parameter != null && !parameter.isThis()? parameter.getRequest() : null;
-		return req != null? Map.entry(header, req) : Map.entry(header, new HTTPRequest("", ""));
+	public HTTPRequest getHTTPRequest() {
+		return parameter != null && !parameter.isThis()? parameter.getRequest() : null;
 	}
 
 	public boolean isPathParam() {
