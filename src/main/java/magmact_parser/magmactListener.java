@@ -1,5 +1,4 @@
-package magmact_parser;
-
+package magmact_parser;// Generated from java-escape by ANTLR 4.11.1
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -58,12 +57,12 @@ public interface magmactListener extends ParseTreeListener {
 	 */
 	void exitCall(magmactParser.CallContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link magmactParser booleanExpression}.
+	 * Enter a parse tree produced by {@link magmactParser}.
 	 * @param ctx the parse tree
 	 */
 	void enterBooleanExpression(magmactParser.BooleanExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link magmactParser booleanExpression}.
+	 * Exit a parse tree produced by {@link magmactParser}.
 	 * @param ctx the parse tree
 	 */
 	void exitBooleanExpression(magmactParser.BooleanExpressionContext ctx);

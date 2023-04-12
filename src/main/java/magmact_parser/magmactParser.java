@@ -1,11 +1,12 @@
-package magmact_parser;
-
-import org.antlr.v4.runtime.*;
+package magmact_parser;// Generated from java-escape by ANTLR 4.11.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
-
 import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
 public class magmactParser extends Parser {
@@ -19,8 +20,9 @@ public class magmactParser extends Parser {
 		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, T__16=17, 
 		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, T__22=23, T__23=24, 
 		T__24=25, T__25=26, T__26=27, T__27=28, T__28=29, T__29=30, T__30=31, 
-		THIS=32, STRING=33, INT=34, RBAR=35, LCURL=36, RCURL=37, LPAR=38, RPAR=39, 
-		LSTR8=40, RSTR8=41, NEWLINE=42, WS=43;
+		T__31=32, T__32=33, T__33=34, T__34=35, THIS=36, STRING=37, INT=38, RBAR=39, 
+		LCURL=40, RCURL=41, LPAR=42, RPAR=43, LSTR8=44, RSTR8=45, NEWLINE=46, 
+		WS=47;
 	public static final int
 		RULE_formula = 0, RULE_quantifiedFormula = 1, RULE_quantifier = 2, RULE_vars = 3, 
 		RULE_call = 4, RULE_booleanExpression = 5, RULE_clause = 6, RULE_comparison = 7, 
@@ -48,9 +50,9 @@ public class magmactParser extends Parser {
 			null, "':-'", "':'", "'for'", "'exists'", "'in'", "','", "'null'", "'nil'", 
 			"'none'", "'request_body'", "'response_body'", "'response_code'", "'path_param'", 
 			"'query_param'", "'GET'", "'POST'", "'PUT'", "'DELETE'", "'=='", "'!='", 
-			"'<='", "'>='", "'<'", "'>'", "'&&'", "'||'", "'=>'", "'T'", "'F'", "'.'", 
-			"'previous'", "'this'", null, null, "'/'", "'{'", "'}'", "'('", "')'", 
-			"'['", "']'", null, "' '"
+			"'<='", "'>='", "'<'", "'>'", "'&&'", "'||'", "'=>'", "'T'", "'F'", "'True'", 
+			"'False'", "'true'", "'false'", "'.'", "'previous'", "'this'", null, 
+			null, "'/'", "'{'", "'}'", "'('", "')'", "'['", "']'", null, "' '"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -58,9 +60,9 @@ public class magmactParser extends Parser {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, null, null, null, null, null, null, "THIS", "STRING", "INT", 
-			"RBAR", "LCURL", "RCURL", "LPAR", "RPAR", "LSTR8", "RSTR8", "NEWLINE", 
-			"WS"
+			null, null, null, null, null, null, null, null, null, null, null, null, 
+			"THIS", "STRING", "INT", "RBAR", "LCURL", "RCURL", "LPAR", "RPAR", "LSTR8", 
+			"RSTR8", "NEWLINE", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -128,11 +130,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_formula; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterFormula(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterFormula(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitFormula(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitFormula(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -163,7 +165,11 @@ public class magmactParser extends Parser {
 			case T__13:
 			case T__27:
 			case T__28:
+			case T__29:
 			case T__30:
+			case T__31:
+			case T__32:
+			case T__34:
 			case STRING:
 			case INT:
 			case LCURL:
@@ -208,11 +214,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_quantifiedFormula; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterQuantifiedFormula(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterQuantifiedFormula(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitQuantifiedFormula(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitQuantifiedFormula(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -275,11 +281,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_quantifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterQuantifier(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterQuantifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitQuantifier(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitQuantifier(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -335,11 +341,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_vars; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterVars(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterVars(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitVars(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitVars(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -404,11 +410,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_call; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterCall(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterCall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitCall(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitCall(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -435,7 +441,7 @@ public class magmactParser extends Parser {
 				operation();
 				}
 				break;
-			case T__30:
+			case T__34:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(95);
@@ -477,11 +483,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_booleanExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterBooleanExpression(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterBooleanExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitBooleanExpression(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitBooleanExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -561,11 +567,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_clause; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterClause(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterClause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitClause(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitClause(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -583,6 +589,10 @@ public class magmactParser extends Parser {
 			switch (_input.LA(1)) {
 			case T__27:
 			case T__28:
+			case T__29:
+			case T__30:
+			case T__31:
+			case T__32:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(110);
@@ -594,7 +604,7 @@ public class magmactParser extends Parser {
 			case T__11:
 			case T__12:
 			case T__13:
-			case T__30:
+			case T__34:
 			case STRING:
 			case INT:
 			case LCURL:
@@ -636,11 +646,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_comparison; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterComparison(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterComparison(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitComparison(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitComparison(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -690,11 +700,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_leftTerm; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterLeftTerm(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterLeftTerm(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitLeftTerm(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitLeftTerm(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -716,7 +726,7 @@ public class magmactParser extends Parser {
 			case T__11:
 			case T__12:
 			case T__13:
-			case T__30:
+			case T__34:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(118);
@@ -781,11 +791,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_rightTerm; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterRightTerm(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterRightTerm(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitRightTerm(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitRightTerm(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -806,7 +816,7 @@ public class magmactParser extends Parser {
 			case T__11:
 			case T__12:
 			case T__13:
-			case T__30:
+			case T__34:
 			case STRING:
 			case INT:
 			case LCURL:
@@ -848,11 +858,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_noValue; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterNoValue(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterNoValue(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitNoValue(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitNoValue(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -907,11 +917,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_operationPrevious; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterOperationPrevious(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterOperationPrevious(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitOperationPrevious(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitOperationPrevious(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -972,11 +982,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_operation; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterOperation(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterOperation(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitOperation(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitOperation(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1062,11 +1072,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_operationSuffix; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterOperationSuffix(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterOperationSuffix(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitOperationSuffix(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitOperationSuffix(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1082,7 +1092,7 @@ public class magmactParser extends Parser {
 			setState(155);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case T__29:
+			case T__33:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(150);
@@ -1123,11 +1133,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_operationHeader; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterOperationHeader(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterOperationHeader(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitOperationHeader(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitOperationHeader(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1180,11 +1190,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_pathParameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterPathParameter(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterPathParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitPathParameter(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitPathParameter(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1240,11 +1250,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_queryParameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterQueryParameter(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterQueryParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitQueryParameter(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitQueryParameter(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1298,11 +1308,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_operationParameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterOperationParameter(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterOperationParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitOperationParameter(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitOperationParameter(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1364,11 +1374,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_httpRequest; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterHttpRequest(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterHttpRequest(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitHttpRequest(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitHttpRequest(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1414,11 +1424,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_url; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterUrl(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterUrl(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitUrl(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitUrl(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1469,11 +1479,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_method; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterMethod(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterMethod(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitMethod(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitMethod(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1520,11 +1530,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_comparator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterComparator(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterComparator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitComparator(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitComparator(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1571,11 +1581,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_booleanOperator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterBooleanOperator(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterBooleanOperator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitBooleanOperator(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitBooleanOperator(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1622,11 +1632,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_booleanValue; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterBooleanValue(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterBooleanValue(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitBooleanValue(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitBooleanValue(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1644,7 +1654,7 @@ public class magmactParser extends Parser {
 			{
 			setState(193);
 			_la = _input.LA(1);
-			if ( !(_la==T__27 || _la==T__28) ) {
+			if ( !(((_la) & ~0x3f) == 0 && ((1L << _la) & 16911433728L) != 0) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -1677,11 +1687,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_stringParam; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterStringParam(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterStringParam(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitStringParam(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitStringParam(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1707,7 +1717,7 @@ public class magmactParser extends Parser {
 					{
 					{
 					setState(196);
-					match(T__29);
+					match(T__33);
 					setState(197);
 					match(STRING);
 					}
@@ -1742,11 +1752,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_param; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterParam(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterParam(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitParam(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitParam(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1806,11 +1816,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_segment; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterSegment(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterSegment(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitSegment(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitSegment(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1833,11 +1843,11 @@ public class magmactParser extends Parser {
 			setState(213);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==T__29) {
+			while (_la==T__33) {
 				{
 				{
 				setState(209);
-				match(T__29);
+				match(T__33);
 				setState(210);
 				block();
 				}
@@ -1877,11 +1887,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_block; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterBlock(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitBlock(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitBlock(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1960,11 +1970,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_blockParameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterBlockParameter(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterBlockParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitBlockParameter(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitBlockParameter(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1985,10 +1995,10 @@ public class magmactParser extends Parser {
 			setState(228);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if (_la==T__29) {
+			if (_la==T__33) {
 				{
 				setState(226);
-				match(T__29);
+				match(T__33);
 				setState(227);
 				match(STRING);
 				}
@@ -2018,11 +2028,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_function; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterFunction(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterFunction(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitFunction(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitFunction(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2038,7 +2048,7 @@ public class magmactParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(230);
-			match(T__29);
+			match(T__33);
 			setState(231);
 			functionID();
 			}
@@ -2063,11 +2073,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionID; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterFunctionID(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterFunctionID(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitFunctionID(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitFunctionID(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2106,11 +2116,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_varID; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterVarID(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterVarID(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitVarID(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitVarID(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2148,11 +2158,11 @@ public class magmactParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_previousHeader; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).enterPreviousHeader(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).enterPreviousHeader(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof magmactListener) ((magmactListener)listener).exitPreviousHeader(this);
+			if ( listener instanceof magmactListener ) ((magmactListener)listener).exitPreviousHeader(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2168,7 +2178,7 @@ public class magmactParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(237);
-			match(T__30);
+			match(T__34);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2198,7 +2208,7 @@ public class magmactParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001+\u00f0\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001/\u00f0\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
 		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0002"+
@@ -2239,7 +2249,7 @@ public class magmactParser extends Parser {
 		"\u0012\u0014\u0016\u0018\u001a\u001c\u001e \"$&(*,.02468:<>@\u0000\u0007"+
 		"\u0001\u0000\u0003\u0004\u0001\u0000\u0007\t\u0001\u0000\n\f\u0001\u0000"+
 		"\u000f\u0012\u0001\u0000\u0013\u0018\u0001\u0000\u0019\u001b\u0001\u0000"+
-		"\u001c\u001d\u00e5\u0000D\u0001\u0000\u0000\u0000\u0002P\u0001\u0000\u0000"+
+		"\u001c!\u00e5\u0000D\u0001\u0000\u0000\u0000\u0002P\u0001\u0000\u0000"+
 		"\u0000\u0004R\u0001\u0000\u0000\u0000\u0006\\\u0001\u0000\u0000\u0000"+
 		"\b`\u0001\u0000\u0000\u0000\nb\u0001\u0000\u0000\u0000\fp\u0001\u0000"+
 		"\u0000\u0000\u000er\u0001\u0000\u0000\u0000\u0010~\u0001\u0000\u0000\u0000"+
@@ -2275,69 +2285,69 @@ public class magmactParser extends Parser {
 		"\u0007\u0000pn\u0001\u0000\u0000\u0000po\u0001\u0000\u0000\u0000q\r\u0001"+
 		"\u0000\u0000\u0000rs\u0003\u0010\b\u0000st\u0003*\u0015\u0000tu\u0003"+
 		"\u0012\t\u0000u\u000f\u0001\u0000\u0000\u0000v\u007f\u0003\b\u0004\u0000"+
-		"wy\u0005$\u0000\u0000xw\u0001\u0000\u0000\u0000xy\u0001\u0000\u0000\u0000"+
-		"yz\u0001\u0000\u0000\u0000z|\u00032\u0019\u0000{}\u0005%\u0000\u0000|"+
+		"wy\u0005(\u0000\u0000xw\u0001\u0000\u0000\u0000xy\u0001\u0000\u0000\u0000"+
+		"yz\u0001\u0000\u0000\u0000z|\u00032\u0019\u0000{}\u0005)\u0000\u0000|"+
 		"{\u0001\u0000\u0000\u0000|}\u0001\u0000\u0000\u0000}\u007f\u0001\u0000"+
 		"\u0000\u0000~v\u0001\u0000\u0000\u0000~x\u0001\u0000\u0000\u0000\u007f"+
 		"\u0011\u0001\u0000\u0000\u0000\u0080\u0083\u0003\u0010\b\u0000\u0081\u0083"+
 		"\u0003\u0014\n\u0000\u0082\u0080\u0001\u0000\u0000\u0000\u0082\u0081\u0001"+
 		"\u0000\u0000\u0000\u0083\u0013\u0001\u0000\u0000\u0000\u0084\u0085\u0007"+
 		"\u0001\u0000\u0000\u0085\u0015\u0001\u0000\u0000\u0000\u0086\u0087\u0003"+
-		"@ \u0000\u0087\u0088\u0005&\u0000\u0000\u0088\u0089\u0003\u0018\f\u0000"+
-		"\u0089\u008a\u0005\'\u0000\u0000\u008a\u0017\u0001\u0000\u0000\u0000\u008b"+
-		"\u008c\u0003\u001c\u000e\u0000\u008c\u008d\u0005&\u0000\u0000\u008d\u008e"+
-		"\u0003\"\u0011\u0000\u008e\u0090\u0005\'\u0000\u0000\u008f\u0091\u0003"+
+		"@ \u0000\u0087\u0088\u0005*\u0000\u0000\u0088\u0089\u0003\u0018\f\u0000"+
+		"\u0089\u008a\u0005+\u0000\u0000\u008a\u0017\u0001\u0000\u0000\u0000\u008b"+
+		"\u008c\u0003\u001c\u000e\u0000\u008c\u008d\u0005*\u0000\u0000\u008d\u008e"+
+		"\u0003\"\u0011\u0000\u008e\u0090\u0005+\u0000\u0000\u008f\u0091\u0003"+
 		"\u001a\r\u0000\u0090\u008f\u0001\u0000\u0000\u0000\u0090\u0091\u0001\u0000"+
 		"\u0000\u0000\u0091\u0095\u0001\u0000\u0000\u0000\u0092\u0095\u0003\u001e"+
 		"\u000f\u0000\u0093\u0095\u0003 \u0010\u0000\u0094\u008b\u0001\u0000\u0000"+
 		"\u0000\u0094\u0092\u0001\u0000\u0000\u0000\u0094\u0093\u0001\u0000\u0000"+
 		"\u0000\u0095\u0019\u0001\u0000\u0000\u0000\u0096\u009c\u0003:\u001d\u0000"+
-		"\u0097\u0098\u0005$\u0000\u0000\u0098\u0099\u00030\u0018\u0000\u0099\u009a"+
-		"\u0005%\u0000\u0000\u009a\u009c\u0001\u0000\u0000\u0000\u009b\u0096\u0001"+
+		"\u0097\u0098\u0005(\u0000\u0000\u0098\u0099\u00030\u0018\u0000\u0099\u009a"+
+		"\u0005)\u0000\u0000\u009a\u009c\u0001\u0000\u0000\u0000\u009b\u0096\u0001"+
 		"\u0000\u0000\u0000\u009b\u0097\u0001\u0000\u0000\u0000\u009c\u001b\u0001"+
 		"\u0000\u0000\u0000\u009d\u009e\u0007\u0002\u0000\u0000\u009e\u001d\u0001"+
-		"\u0000\u0000\u0000\u009f\u00a0\u0005\r\u0000\u0000\u00a0\u00a1\u0005&"+
-		"\u0000\u0000\u00a1\u00a2\u0005 \u0000\u0000\u00a2\u00a3\u0005(\u0000\u0000"+
-		"\u00a3\u00a4\u0005\"\u0000\u0000\u00a4\u00a5\u0005)\u0000\u0000\u00a5"+
-		"\u00a6\u0005\'\u0000\u0000\u00a6\u001f\u0001\u0000\u0000\u0000\u00a7\u00a8"+
-		"\u0005\u000e\u0000\u0000\u00a8\u00a9\u0005&\u0000\u0000\u00a9\u00aa\u0005"+
-		" \u0000\u0000\u00aa\u00ab\u0005\'\u0000\u0000\u00ab\u00ac\u0005$\u0000"+
-		"\u0000\u00ac\u00ad\u0005!\u0000\u0000\u00ad\u00ae\u0005%\u0000\u0000\u00ae"+
-		"!\u0001\u0000\u0000\u0000\u00af\u00b2\u0003$\u0012\u0000\u00b0\u00b2\u0005"+
-		" \u0000\u0000\u00b1\u00af\u0001\u0000\u0000\u0000\u00b1\u00b0\u0001\u0000"+
-		"\u0000\u0000\u00b2#\u0001\u0000\u0000\u0000\u00b3\u00b4\u0003(\u0014\u0000"+
-		"\u00b4\u00b5\u0003&\u0013\u0000\u00b5%\u0001\u0000\u0000\u0000\u00b6\u00b8"+
-		"\u00034\u001a\u0000\u00b7\u00b6\u0001\u0000\u0000\u0000\u00b8\u00b9\u0001"+
-		"\u0000\u0000\u0000\u00b9\u00b7\u0001\u0000\u0000\u0000\u00b9\u00ba\u0001"+
-		"\u0000\u0000\u0000\u00ba\'\u0001\u0000\u0000\u0000\u00bb\u00bc\u0007\u0003"+
-		"\u0000\u0000\u00bc)\u0001\u0000\u0000\u0000\u00bd\u00be\u0007\u0004\u0000"+
-		"\u0000\u00be+\u0001\u0000\u0000\u0000\u00bf\u00c0\u0007\u0005\u0000\u0000"+
-		"\u00c0-\u0001\u0000\u0000\u0000\u00c1\u00c2\u0007\u0006\u0000\u0000\u00c2"+
-		"/\u0001\u0000\u0000\u0000\u00c3\u00c8\u0005!\u0000\u0000\u00c4\u00c5\u0005"+
-		"\u001e\u0000\u0000\u00c5\u00c7\u0005!\u0000\u0000\u00c6\u00c4\u0001\u0000"+
-		"\u0000\u0000\u00c7\u00ca\u0001\u0000\u0000\u0000\u00c8\u00c6\u0001\u0000"+
-		"\u0000\u0000\u00c8\u00c9\u0001\u0000\u0000\u0000\u00c91\u0001\u0000\u0000"+
-		"\u0000\u00ca\u00c8\u0001\u0000\u0000\u0000\u00cb\u00ce\u00030\u0018\u0000"+
-		"\u00cc\u00ce\u0005\"\u0000\u0000\u00cd\u00cb\u0001\u0000\u0000\u0000\u00cd"+
-		"\u00cc\u0001\u0000\u0000\u0000\u00ce3\u0001\u0000\u0000\u0000\u00cf\u00d0"+
-		"\u0005#\u0000\u0000\u00d0\u00d5\u00036\u001b\u0000\u00d1\u00d2\u0005\u001e"+
-		"\u0000\u0000\u00d2\u00d4\u00036\u001b\u0000\u00d3\u00d1\u0001\u0000\u0000"+
-		"\u0000\u00d4\u00d7\u0001\u0000\u0000\u0000\u00d5\u00d3\u0001\u0000\u0000"+
-		"\u0000\u00d5\u00d6\u0001\u0000\u0000\u0000\u00d65\u0001\u0000\u0000\u0000"+
-		"\u00d7\u00d5\u0001\u0000\u0000\u0000\u00d8\u00d9\u0005$\u0000\u0000\u00d9"+
-		"\u00da\u00038\u001c\u0000\u00da\u00db\u0005%\u0000\u0000\u00db\u00e0\u0001"+
-		"\u0000\u0000\u0000\u00dc\u00e0\u0005!\u0000\u0000\u00dd\u00e0\u0005\""+
-		"\u0000\u0000\u00de\u00e0\u0003\u0018\f\u0000\u00df\u00d8\u0001\u0000\u0000"+
-		"\u0000\u00df\u00dc\u0001\u0000\u0000\u0000\u00df\u00dd\u0001\u0000\u0000"+
-		"\u0000\u00df\u00de\u0001\u0000\u0000\u0000\u00e07\u0001\u0000\u0000\u0000"+
-		"\u00e1\u00e4\u0005!\u0000\u0000\u00e2\u00e3\u0005\u001e\u0000\u0000\u00e3"+
-		"\u00e5\u0005!\u0000\u0000\u00e4\u00e2\u0001\u0000\u0000\u0000\u00e4\u00e5"+
-		"\u0001\u0000\u0000\u0000\u00e59\u0001\u0000\u0000\u0000\u00e6\u00e7\u0005"+
-		"\u001e\u0000\u0000\u00e7\u00e8\u0003<\u001e\u0000\u00e8;\u0001\u0000\u0000"+
-		"\u0000\u00e9\u00ea\u0005!\u0000\u0000\u00ea=\u0001\u0000\u0000\u0000\u00eb"+
-		"\u00ec\u0005!\u0000\u0000\u00ec?\u0001\u0000\u0000\u0000\u00ed\u00ee\u0005"+
-		"\u001f\u0000\u0000\u00eeA\u0001\u0000\u0000\u0000\u0014DP\\`kpx|~\u0082"+
-		"\u0090\u0094\u009b\u00b1\u00b9\u00c8\u00cd\u00d5\u00df\u00e4";
+		"\u0000\u0000\u0000\u009f\u00a0\u0005\r\u0000\u0000\u00a0\u00a1\u0005*"+
+		"\u0000\u0000\u00a1\u00a2\u0005$\u0000\u0000\u00a2\u00a3\u0005,\u0000\u0000"+
+		"\u00a3\u00a4\u0005&\u0000\u0000\u00a4\u00a5\u0005-\u0000\u0000\u00a5\u00a6"+
+		"\u0005+\u0000\u0000\u00a6\u001f\u0001\u0000\u0000\u0000\u00a7\u00a8\u0005"+
+		"\u000e\u0000\u0000\u00a8\u00a9\u0005*\u0000\u0000\u00a9\u00aa\u0005$\u0000"+
+		"\u0000\u00aa\u00ab\u0005+\u0000\u0000\u00ab\u00ac\u0005(\u0000\u0000\u00ac"+
+		"\u00ad\u0005%\u0000\u0000\u00ad\u00ae\u0005)\u0000\u0000\u00ae!\u0001"+
+		"\u0000\u0000\u0000\u00af\u00b2\u0003$\u0012\u0000\u00b0\u00b2\u0005$\u0000"+
+		"\u0000\u00b1\u00af\u0001\u0000\u0000\u0000\u00b1\u00b0\u0001\u0000\u0000"+
+		"\u0000\u00b2#\u0001\u0000\u0000\u0000\u00b3\u00b4\u0003(\u0014\u0000\u00b4"+
+		"\u00b5\u0003&\u0013\u0000\u00b5%\u0001\u0000\u0000\u0000\u00b6\u00b8\u0003"+
+		"4\u001a\u0000\u00b7\u00b6\u0001\u0000\u0000\u0000\u00b8\u00b9\u0001\u0000"+
+		"\u0000\u0000\u00b9\u00b7\u0001\u0000\u0000\u0000\u00b9\u00ba\u0001\u0000"+
+		"\u0000\u0000\u00ba\'\u0001\u0000\u0000\u0000\u00bb\u00bc\u0007\u0003\u0000"+
+		"\u0000\u00bc)\u0001\u0000\u0000\u0000\u00bd\u00be\u0007\u0004\u0000\u0000"+
+		"\u00be+\u0001\u0000\u0000\u0000\u00bf\u00c0\u0007\u0005\u0000\u0000\u00c0"+
+		"-\u0001\u0000\u0000\u0000\u00c1\u00c2\u0007\u0006\u0000\u0000\u00c2/\u0001"+
+		"\u0000\u0000\u0000\u00c3\u00c8\u0005%\u0000\u0000\u00c4\u00c5\u0005\""+
+		"\u0000\u0000\u00c5\u00c7\u0005%\u0000\u0000\u00c6\u00c4\u0001\u0000\u0000"+
+		"\u0000\u00c7\u00ca\u0001\u0000\u0000\u0000\u00c8\u00c6\u0001\u0000\u0000"+
+		"\u0000\u00c8\u00c9\u0001\u0000\u0000\u0000\u00c91\u0001\u0000\u0000\u0000"+
+		"\u00ca\u00c8\u0001\u0000\u0000\u0000\u00cb\u00ce\u00030\u0018\u0000\u00cc"+
+		"\u00ce\u0005&\u0000\u0000\u00cd\u00cb\u0001\u0000\u0000\u0000\u00cd\u00cc"+
+		"\u0001\u0000\u0000\u0000\u00ce3\u0001\u0000\u0000\u0000\u00cf\u00d0\u0005"+
+		"\'\u0000\u0000\u00d0\u00d5\u00036\u001b\u0000\u00d1\u00d2\u0005\"\u0000"+
+		"\u0000\u00d2\u00d4\u00036\u001b\u0000\u00d3\u00d1\u0001\u0000\u0000\u0000"+
+		"\u00d4\u00d7\u0001\u0000\u0000\u0000\u00d5\u00d3\u0001\u0000\u0000\u0000"+
+		"\u00d5\u00d6\u0001\u0000\u0000\u0000\u00d65\u0001\u0000\u0000\u0000\u00d7"+
+		"\u00d5\u0001\u0000\u0000\u0000\u00d8\u00d9\u0005(\u0000\u0000\u00d9\u00da"+
+		"\u00038\u001c\u0000\u00da\u00db\u0005)\u0000\u0000\u00db\u00e0\u0001\u0000"+
+		"\u0000\u0000\u00dc\u00e0\u0005%\u0000\u0000\u00dd\u00e0\u0005&\u0000\u0000"+
+		"\u00de\u00e0\u0003\u0018\f\u0000\u00df\u00d8\u0001\u0000\u0000\u0000\u00df"+
+		"\u00dc\u0001\u0000\u0000\u0000\u00df\u00dd\u0001\u0000\u0000\u0000\u00df"+
+		"\u00de\u0001\u0000\u0000\u0000\u00e07\u0001\u0000\u0000\u0000\u00e1\u00e4"+
+		"\u0005%\u0000\u0000\u00e2\u00e3\u0005\"\u0000\u0000\u00e3\u00e5\u0005"+
+		"%\u0000\u0000\u00e4\u00e2\u0001\u0000\u0000\u0000\u00e4\u00e5\u0001\u0000"+
+		"\u0000\u0000\u00e59\u0001\u0000\u0000\u0000\u00e6\u00e7\u0005\"\u0000"+
+		"\u0000\u00e7\u00e8\u0003<\u001e\u0000\u00e8;\u0001\u0000\u0000\u0000\u00e9"+
+		"\u00ea\u0005%\u0000\u0000\u00ea=\u0001\u0000\u0000\u0000\u00eb\u00ec\u0005"+
+		"%\u0000\u0000\u00ec?\u0001\u0000\u0000\u0000\u00ed\u00ee\u0005#\u0000"+
+		"\u0000\u00eeA\u0001\u0000\u0000\u0000\u0014DP\\`kpx|~\u0082\u0090\u0094"+
+		"\u009b\u00b1\u00b9\u00c8\u00cd\u00d5\u00df\u00e4";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

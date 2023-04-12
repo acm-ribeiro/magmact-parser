@@ -1,5 +1,4 @@
-package magmact_parser;
-
+package magmact_parser;// Generated from java-escape by ANTLR 4.11.1
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -41,7 +40,7 @@ public interface magmactVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCall(magmactParser.CallContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link magmactParser booleanExpression}.
+	 * Visit a parse tree produced by {@link magmactParser}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */

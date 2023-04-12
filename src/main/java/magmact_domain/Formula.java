@@ -1,7 +1,6 @@
 package magmact_domain;
 
 import java.io.Serializable;
-import java.util.Map;
 
 @SuppressWarnings("ALL")
 public class Formula implements Serializable {
@@ -55,17 +54,11 @@ public class Formula implements Serializable {
 	}
 
 	public boolean hasPathParameter() {
-		if (isQuantified())
-			return quantifiedFormula.hasPathParameter();
-		else
-			return booleanExpression.hasPathParameter();
+		return isQuantified()? quantifiedFormula.hasPathParameter() : booleanExpression.hasPathParameter();
 	}
 
 	public boolean hasQueryParameter() {
-		if (isQuantified())
-			return quantifiedFormula.hasQueryParameter();
-		else
-			return booleanExpression.hasQueryParameter();
+		return isQuantified()? quantifiedFormula.hasQueryParameter() : booleanExpression.hasQueryParameter();
 	}
 
 	public boolean hasThis() {
