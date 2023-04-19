@@ -10,7 +10,10 @@ public class BooleanValue implements Serializable {
 	private boolean value;
 	
 	public BooleanValue(String value) {
-		this.value = value.equalsIgnoreCase("T")? true : false;
+		if (value.equalsIgnoreCase("T") || value.equalsIgnoreCase("True"))
+			this.value = true;
+		else
+			this.value = false;
 	}
 	
 	public boolean getValue() {

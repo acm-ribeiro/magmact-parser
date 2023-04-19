@@ -89,6 +89,20 @@ public class MAGMACtDomainTests {
         assertEquals(prev1.toString(), prev2.toString());
     }
 
+    @Test
+    public void testParserBooleanValue(){
+        Formula f1 = getFormula("T");
+        Formula f2 = getFormula("F");
+
+        assertEquals("true", f1.toString());
+        assertEquals("false", f2.toString());
+
+        Formula f3 = getFormula("true");
+        Formula f4 = getFormula("false");
+
+        assertEquals("true", f3.toString());
+        assertEquals("false", f4.toString());
+    }
 
 
 
