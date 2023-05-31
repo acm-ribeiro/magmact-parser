@@ -15,7 +15,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>main.java.run.Main</mainClass>
+                            <mainClass>run.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

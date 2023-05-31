@@ -1,10 +1,12 @@
 package magmact_domain;
 
+import java.io.Serial;
 import java.io.Serializable;
 
-@SuppressWarnings("ALL")
+
 public class Formula implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 	
 	private QuantifiedFormula quantifiedFormula;
@@ -51,6 +53,10 @@ public class Formula implements Serializable {
 
 	public boolean isComparison() {
 		return booleanExpression != null && booleanExpression.getClause() != null && booleanExpression.getClause().isComparison();
+	}
+
+	public boolean hasResponseBody() {
+		return isQuantified()? quantifiedFormula.hasResponseBody() : booleanExpression.hasResponseBody();
 	}
 
 	public boolean hasPathParameter() {

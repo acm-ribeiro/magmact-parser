@@ -1,11 +1,11 @@
 package magmact_domain;
 
+import java.io.Serial;
 import java.io.Serializable;
-import java.util.Map;
 
-@SuppressWarnings("ALL")
 public class RightTerm implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private LeftTerm leftTerm;
@@ -43,23 +43,27 @@ public class RightTerm implements Serializable {
     }
 
     public boolean hasStringParameter() {
-        return leftTerm != null? leftTerm.hasStringParameter() : false;
+        return leftTerm != null && leftTerm.hasStringParameter();
     }
 
     public boolean hasPathParameter() {
-        return leftTerm != null? leftTerm.hasPathParameter() : false;
+        return leftTerm != null && leftTerm.hasPathParameter();
+    }
+
+    public boolean hasResponseBody() {
+        return leftTerm != null && leftTerm.hasResponseBody();
     }
 
     public boolean hasQueryParameter() {
-        return leftTerm != null? leftTerm.hasQueryParameter() : false;
+        return leftTerm != null && leftTerm.hasQueryParameter();
     }
 
     public boolean hasThis() {
-        return leftTerm != null? leftTerm.hasThis() : false;
+        return leftTerm != null && leftTerm.hasThis();
     }
 
     public boolean hasPrevious () {
-        return leftTerm != null? leftTerm.hasPrevious() : false;
+        return leftTerm != null && leftTerm.hasPrevious();
     }
 
     public OperationPrevious getOperationPrevious() {
@@ -67,12 +71,12 @@ public class RightTerm implements Serializable {
     }
 
     public boolean hasComposedParameters() {
-        return leftTerm != null? leftTerm.hasComposedParameters() : false;
+        return leftTerm != null && leftTerm.hasComposedParameters();
     }
 
 
     public boolean hasUrlComposedParameters() {
-        return leftTerm != null? leftTerm.hasUrlComposedParameters() : false;
+        return leftTerm != null && leftTerm.hasUrlComposedParameters();
     }
 
     public boolean isLeftTerm() {

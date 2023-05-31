@@ -1,10 +1,12 @@
 package magmact_domain;
 
+import java.io.Serial;
 import java.io.Serializable;
 
-@SuppressWarnings("ALL")
+
 public class OperationParameter implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 	
 	private HTTPRequest request;
@@ -68,15 +70,15 @@ public class OperationParameter implements Serializable {
 
 
 	public boolean hasPathParameter() {
-		return this_request != null? false : request.getUrl().hasPathParameter();
+		return this_request == null && request.getUrl().hasPathParameter();
 	}
 
 	public boolean hasUrlRequestBody() {
-		return this_request == null ? request.hasRequestBody() : false;
+		return this_request == null && request.hasRequestBody();
 	}
 
 	public boolean hasUrlResponseBody() {
-		return this_request == null? request.hasResponseBody() : false;
+		return this_request == null && request.hasResponseBody();
 	}
 
 	@Override

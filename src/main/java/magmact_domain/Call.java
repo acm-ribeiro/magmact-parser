@@ -1,11 +1,12 @@
 package magmact_domain;
 
+import java.io.Serial;
 import java.io.Serializable;
-import java.util.Map;
 
-@SuppressWarnings("ALL")
+
 public class Call implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 	
 	private Operation operation;
@@ -77,15 +78,15 @@ public class Call implements Serializable {
 	}
 
 	public boolean hasPathParameter() {
-		boolean operation_path = operation != null? operation.isPathParam() || operation.hasUrlPathParam() : false;
-		boolean previous_path = operationPrevious != null? operationPrevious.hasPathParam() : false;
+		boolean operation_path = operation != null && (operation.isPathParam() || operation.hasUrlPathParam());
+		boolean previous_path = operationPrevious != null && operationPrevious.hasPathParam();
 
 		return operation_path || previous_path;
 	}
 
 	public boolean hasQueryParameter() {
-		boolean operation_query = operation != null? operation.isQueryParam() || operation.hasUrlQueryParam() : false;
-		boolean previous_query = operationPrevious != null? operationPrevious.hasQueryParam() : false;
+		boolean operation_query = operation != null && (operation.isQueryParam() || operation.hasUrlQueryParam());
+		boolean previous_query = operationPrevious != null && operationPrevious.hasQueryParam();
 
 		return operation_query || previous_query;
 	}
@@ -95,17 +96,21 @@ public class Call implements Serializable {
 	}
 
 	public boolean hasComposedParameters() {
-		boolean operation_comp = operation != null? operation.hasComposedParameters() : false;
-		boolean previous_comp = operationPrevious != null? operationPrevious.hasComposedParameters() : false;
+		boolean operation_comp = operation != null && operation.hasComposedParameters();
+		boolean previous_comp = operationPrevious != null && operationPrevious.hasComposedParameters();
 
 		return operation_comp || previous_comp;
 	}
 
 	public boolean hasUrlComposedParameters() {
-		boolean operation_comp = operation != null? operation.hasUrlComposedParameters() : false;
-		boolean previous_comp = operationPrevious != null? operationPrevious.hasUrlComposedParameters() : false;
+		boolean operation_comp = operation != null && operation.hasUrlComposedParameters();
+		boolean previous_comp = operationPrevious != null && operationPrevious.hasUrlComposedParameters();
 
 		return operation_comp || previous_comp;
+	}
+
+	public boolean hasResponseBody() {
+		return operation != null? operation.isResponseBody() : operationPrevious.hasResponseBody();
 	}
 
 	public String toString() {

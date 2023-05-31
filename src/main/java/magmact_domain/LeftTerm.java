@@ -1,11 +1,12 @@
 package magmact_domain;
 
+import java.io.Serial;
 import java.io.Serializable;
-import java.util.Map;
 
-@SuppressWarnings("ALL")
+
 public class LeftTerm implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private Call call;
@@ -40,6 +41,10 @@ public class LeftTerm implements Serializable {
         return call != null;
     }
 
+    public boolean hasResponseBody() {
+        return call != null && call.hasResponseBody();
+    }
+
 
     public String getQueryParameterName() {
         return call.getQueryParameterName();
@@ -65,38 +70,36 @@ public class LeftTerm implements Serializable {
      */
     public void setParam(String name, String value) {
         if(param != null && param.isStringParameter() && param.getStringParam().getParam().contains(name)) {
-            Param replacement = new Param(new StringParam(value), null);
-            param = replacement;
+            param = new Param(new StringParam(value), null);
             call = null;
             hasCurls = false;
         }
     }
 
     /**
-     * Replaces a call (path_param, query_param, etc) for a string parameter.
+     * Replaces a call (path_param, query_param, etc.) for a string parameter.
      * @param value the correct parameter value.
      */
     public void replaceCallForParameter(String value) {
-        Param replacement = new Param(new StringParam(value), null);
-        param = replacement;
+        param = new Param(new StringParam(value), null);
         call = null;
         hasCurls = false;
     }
 
     public boolean hasPathParameter() {
-       return call != null? call.hasPathParameter() : false;
+       return call != null && call.hasPathParameter();
     }
 
     public boolean hasQueryParameter() {
-        return call != null? call.hasQueryParameter() : false;
+        return call != null && call.hasQueryParameter();
     }
 
     public boolean hasThis() {
-        return call != null? call.hasThis() : false;
+        return call != null && call.hasThis();
     }
 
     public boolean hasPrevious () {
-        return call != null? call.isPrevious() : false;
+        return call != null && call.isPrevious();
     }
 
     public OperationPrevious getOperationPrevious() {
@@ -104,17 +107,17 @@ public class LeftTerm implements Serializable {
     }
 
     public boolean hasComposedParameters() {
-        return call != null? call.hasComposedParameters() : false;
+        return call != null && call.hasComposedParameters();
     }
 
     public boolean hasUrlComposedParameters() {
-        return call != null? call.hasUrlComposedParameters() : false;
+        return call != null && call.hasUrlComposedParameters();
     }
 
     @Override
     public String toString() {
         if(param != null)
-            return hasCurls? "{" + param.toString() + "}" : param.toString();
+            return hasCurls? "{" + param + "}" : param.toString();
         else if (call != null)
             return call.toString();
         else

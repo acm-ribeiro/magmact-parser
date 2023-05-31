@@ -1,11 +1,12 @@
 package magmact_domain;
 
+import java.io.Serial;
 import java.io.Serializable;
-import java.util.Map;
 
-@SuppressWarnings("ALL")
+
 public class Clause implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 	
 	private BooleanValue value;
@@ -46,20 +47,24 @@ public class Clause implements Serializable {
 		return value != null;
 	}
 
+	public boolean hasResponseBody() {
+		return comparison != null && comparison.hasResponseBody();
+	}
+
 	public boolean hasPathParameter() {
-		return comparison != null? comparison.hasPathParameter() : false;
+		return comparison != null && comparison.hasPathParameter();
 	}
 
 	public boolean hasQueryParameter() {
-		return comparison != null? comparison.hasQueryParameter() : false;
+		return comparison != null && comparison.hasQueryParameter();
 	}
 
 	public boolean hasThis() {
-		return comparison != null? comparison.hasThis() : false;
+		return comparison != null && comparison.hasThis();
 	}
 
 	public boolean hasPrevious () {
-		return comparison != null? comparison.hasPrevious() : false;
+		return comparison != null && comparison.hasPrevious();
 	}
 
 	public OperationPrevious getOperationPrevious() {
@@ -67,11 +72,11 @@ public class Clause implements Serializable {
 	}
 
 	public boolean hasComposedParameters() {
-		return comparison != null? comparison.hasComposedParameters() : false;
+		return comparison != null && comparison.hasComposedParameters();
 	}
 
 	public boolean hasUrlComposedParameters() {
-		return comparison != null? comparison.hasUrlComposedParameters() : false;
+		return comparison != null && comparison.hasUrlComposedParameters();
 	}
 
 	@Override

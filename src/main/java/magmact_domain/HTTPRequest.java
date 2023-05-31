@@ -1,10 +1,11 @@
 package magmact_domain;
 
+import java.io.Serial;
 import java.io.Serializable;
 
-@SuppressWarnings("ALL")
 public class HTTPRequest implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 	
 	private Method method;
@@ -12,7 +13,7 @@ public class HTTPRequest implements Serializable {
 
 
 	/**
-	 * Creates an HttpRequest instance from a method and a url, as strings. OAS spec urls do not contain apostl operations.
+	 * Creates an HttpRequest instance from a method and an url, as strings. OAS spec urls do not contain apostl operations.
 	 * @param method  method id string (e.g. POST, PUT, GET, DELETE, PATCH)
 	 * @param url     OAS path uri.
 	 */
@@ -72,7 +73,7 @@ public class HTTPRequest implements Serializable {
 
 	@Override
 	public String toString() {
-		if(method.equals("") && url.equals(""))
+		if(method.toString().equals("") && url.toString().equals(""))
 			return "";
 		return method.getID().toUpperCase() + " " + url.toString();
 	}

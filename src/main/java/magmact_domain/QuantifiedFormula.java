@@ -1,12 +1,13 @@
 package magmact_domain;
 
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Map;
 
-@SuppressWarnings("ALL")
 public class QuantifiedFormula implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	private Quantifier quantifier;
@@ -80,6 +81,10 @@ public class QuantifiedFormula implements Serializable {
 	 */
 	public boolean hasBlockParameter() {
 		return variables.hasBlockParameter();
+	}
+
+	public boolean hasResponseBody() {
+		return variables.hasResponseBody() || expression.hasResponseBody() || quantifiedFormula.hasResponseBody();
 	}
 
 	public boolean isUniversal(){

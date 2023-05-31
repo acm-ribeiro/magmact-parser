@@ -1,11 +1,12 @@
 package magmact_domain;
 
+import java.io.Serial;
 import java.io.Serializable;
-import java.util.Map;
 
-@SuppressWarnings("ALL")
+
 public class BooleanExpression implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 	
 	private Clause clause;
@@ -35,7 +36,7 @@ public class BooleanExpression implements Serializable {
 		this.clause = clause;
 	}
 
-	public void setLeftExpression(BooleanExpression lelft) {
+	public void setLeftExpression(BooleanExpression left) {
 		this.left = left;
 	}
 
@@ -67,8 +68,12 @@ public class BooleanExpression implements Serializable {
 		return getQueryParameterName() != null;
 	}
 
+	public boolean hasResponseBody() {
+		return clause != null? clause.hasResponseBody() : (left.hasResponseBody() || right.hasResponseBody());
+	}
+
 	public boolean isImplication() {
-		return op.equals("=>");
+		return op.getBooleanOperator().equals("=>");
 	}
 
 	public boolean isClause() {

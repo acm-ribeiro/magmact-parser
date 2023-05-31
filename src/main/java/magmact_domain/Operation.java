@@ -1,13 +1,12 @@
 package magmact_domain;
 
 
+import java.io.Serial;
 import java.io.Serializable;
-import java.util.Map;
-import java.util.Map.Entry;
 
-@SuppressWarnings("ALL")
 public class Operation implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 	
 	private OperationHeader header;

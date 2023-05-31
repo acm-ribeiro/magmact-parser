@@ -1,10 +1,11 @@
 package magmact_domain;
 
+import java.io.Serial;
 import java.io.Serializable;
 
-@SuppressWarnings("ALL")
 public class Variables implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 	
 	private String varId;
@@ -72,6 +73,10 @@ public class Variables implements Serializable {
 		return call != null? call.hasPathParameter() : vars.hasPathParameter();
 	}
 
+	public boolean hasResponseBody() {
+		return call != null? call.hasResponseBody() : vars.hasResponseBody();
+	}
+
 	public boolean hasBlockParameter() {
 		return call != null? call.hasBlockParameter() : vars.hasBlockParameter();
 	}
@@ -104,7 +109,7 @@ public class Variables implements Serializable {
 	@Override
 	public String toString() {
 		if(call != null)
-			return varId + " in " + call.toString();
+			return varId + " in " + call;
 		else
 			return varId + ", " + vars.toString();
 	}
