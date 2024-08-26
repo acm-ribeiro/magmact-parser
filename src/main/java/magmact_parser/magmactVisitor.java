@@ -40,7 +40,7 @@ public interface magmactVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCall(magmactParser.CallContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link magmactParser}.
+	 * Visit a parse tree produced by {@link magmactParser#booleanExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */

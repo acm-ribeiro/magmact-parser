@@ -57,12 +57,12 @@ public interface magmactListener extends ParseTreeListener {
 	 */
 	void exitCall(magmactParser.CallContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link magmactParser}.
+	 * Enter a parse tree produced by {@link magmactParser#booleanExpression}.
 	 * @param ctx the parse tree
 	 */
 	void enterBooleanExpression(magmactParser.BooleanExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link magmactParser}.
+	 * Exit a parse tree produced by {@link magmactParser#booleanExpression}.
 	 * @param ctx the parse tree
 	 */
 	void exitBooleanExpression(magmactParser.BooleanExpressionContext ctx);

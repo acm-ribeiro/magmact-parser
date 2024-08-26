@@ -138,7 +138,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitFormula(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitFormula(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -222,7 +222,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitQuantifiedFormula(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitQuantifiedFormula(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -289,7 +289,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitQuantifier(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitQuantifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -349,7 +349,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitVars(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitVars(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -418,7 +418,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitCall(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitCall(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -491,7 +491,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitBooleanExpression(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitBooleanExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -575,7 +575,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitClause(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitClause(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -654,7 +654,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitComparison(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitComparison(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -708,7 +708,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitLeftTerm(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitLeftTerm(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -799,7 +799,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitRightTerm(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitRightTerm(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -866,7 +866,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitNoValue(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitNoValue(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -925,7 +925,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitOperationPrevious(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitOperationPrevious(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -990,7 +990,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitOperation(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitOperation(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1080,7 +1080,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitOperationSuffix(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitOperationSuffix(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1141,7 +1141,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitOperationHeader(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitOperationHeader(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1198,7 +1198,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitPathParameter(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitPathParameter(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1258,7 +1258,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitQueryParameter(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitQueryParameter(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1316,7 +1316,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitOperationParameter(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitOperationParameter(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1382,7 +1382,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitHttpRequest(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitHttpRequest(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1432,7 +1432,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitUrl(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitUrl(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1487,7 +1487,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitMethod(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitMethod(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1538,7 +1538,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitComparator(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitComparator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1589,7 +1589,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitBooleanOperator(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitBooleanOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1640,7 +1640,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitBooleanValue(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitBooleanValue(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1695,7 +1695,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitStringParam(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitStringParam(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1760,7 +1760,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitParam(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitParam(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1824,7 +1824,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitSegment(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitSegment(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1895,7 +1895,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitBlock(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitBlock(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1978,7 +1978,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitBlockParameter(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitBlockParameter(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2036,7 +2036,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitFunction(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitFunction(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2081,7 +2081,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitFunctionID(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitFunctionID(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2124,7 +2124,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitVarID(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitVarID(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2166,7 +2166,7 @@ public class magmactParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof magmactVisitor) return ((magmactVisitor<? extends T>)visitor).visitPreviousHeader(this);
+			if ( visitor instanceof magmactVisitor ) return ((magmactVisitor<? extends T>)visitor).visitPreviousHeader(this);
 			else return visitor.visitChildren(this);
 		}
 	}
